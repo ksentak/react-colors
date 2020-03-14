@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+
 import Slider from 'rc-slider';
+
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
+
+import Snackbar from '@material-ui/core/Snackbar';
+import CloseIcon from '@material-ui/icons/Close';
+
 import 'rc-slider/assets/index.css';
 import './css/Navbar.css';
 
