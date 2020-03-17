@@ -10,11 +10,11 @@ const styles = {
     position: 'relative',
     overflow: 'hidden',
     '&:hover': {
-      cursor: 'pointer',
-    },
+      cursor: 'pointer'
+    }
   },
   colors: {
-    backgroundColor: 'grey',
+    backgroundColor: 'grey'
   },
   title: {
     display: 'flex',
@@ -24,8 +24,8 @@ const styles = {
     color: 'black',
     paddingTop: '0.5rem',
     fontSize: '1rem',
-    position: 'relative',
-  },
+    position: 'relative'
+  }
 };
 
 function MiniPalette(props) {
