@@ -6,7 +6,7 @@ import ColorBox from './ColorBox';
 import PaletteFooter from './PaletteFooter';
 
 import { withStyles } from '@material-ui/styles';
-import styles from './styles/PaletteStyles';
+import styles from '../styles/PaletteStyles';
 
 class SingleColorPalette extends Component {
   constructor(props) {
@@ -44,6 +44,7 @@ class SingleColorPalette extends Component {
         showingFullPalette={false}
       />
     ));
+
     return (
       <div className={classes.Palette}>
         <Navbar handleChange={this.changeFormat} showingAllColors={false} />
