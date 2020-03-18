@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
+
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
+
 import { Picker } from 'emoji-mart';
 import 'emoji-mart/css/emoji-mart.css';
 
@@ -20,6 +22,7 @@ class PaletteMetaForm extends Component {
     this.showEmojiPicker = this.showEmojiPicker.bind(this);
     this.savePalette = this.savePalette.bind(this);
   }
+
   componentDidMount() {
     ValidatorForm.addValidationRule('isPaletteNameUnique', value =>
       this.props.palettes.every(
@@ -27,14 +30,17 @@ class PaletteMetaForm extends Component {
       )
     );
   }
-  handleChange(evt) {
+
+  handleChange(event) {
     this.setState({
-      [evt.target.name]: evt.target.value
+      [event.target.name]: event.target.value
     });
   }
+
   showEmojiPicker() {
     this.setState({ stage: 'emoji' });
   }
+
   savePalette(emoji) {
     const newPalette = {
       paletteName: this.state.newPaletteName,
@@ -43,6 +49,7 @@ class PaletteMetaForm extends Component {
     this.props.handleSubmit(newPalette);
     this.setState({ stage: '' });
   }
+
   handleClickOpen = () => {
     this.setState({ open: true });
   };
@@ -103,4 +110,5 @@ class PaletteMetaForm extends Component {
     );
   }
 }
+
 export default PaletteMetaForm;

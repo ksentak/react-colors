@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { withStyles } from '@material-ui/core/styles';
-import PaletteMetaForm from './PaletteMetaForm';
 import { Link } from 'react-router-dom';
+import PaletteMetaForm from './PaletteMetaForm';
 import classNames from 'classnames';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -10,7 +10,8 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import AddToPhotosIcon from '@material-ui/icons/AddToPhotos';
 import Button from '@material-ui/core/Button';
-import styles from './styles/PaletteFormNavStyles';
+import { withStyles } from '@material-ui/core/styles';
+import styles from '../styles/PaletteFormNavStyles';
 
 class PaletteFormNav extends Component {
   constructor(props) {
@@ -21,17 +22,20 @@ class PaletteFormNav extends Component {
     this.hideForm = this.hideForm.bind(this);
   }
 
-  handleChange(evt) {
+  handleChange(event) {
     this.setState({
-      [evt.target.name]: evt.target.value
+      [event.target.name]: event.target.value
     });
   }
+
   showForm() {
     this.setState({ formShowing: true });
   }
+
   hideForm() {
     this.setState({ formShowing: false });
   }
+
   render() {
     const {
       classes,
@@ -97,4 +101,5 @@ class PaletteFormNav extends Component {
     );
   }
 }
+
 export default withStyles(styles, { withTheme: true })(PaletteFormNav);

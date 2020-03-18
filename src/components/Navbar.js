@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { withStyles } from '@material-ui/styles';
+
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
+
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
-import Slider from 'rc-slider';
-import 'rc-slider/assets/index.css';
-import styles from './styles/NavbarStyles';
+import { withStyles } from '@material-ui/styles';
+import styles from '../styles/NavbarStyles';
 
 class Navbar extends Component {
   constructor(props) {
@@ -17,13 +19,16 @@ class Navbar extends Component {
     this.handleFormatChange = this.handleFormatChange.bind(this);
     this.closeSnackbar = this.closeSnackbar.bind(this);
   }
-  handleFormatChange(e) {
-    this.setState({ format: e.target.value, open: true });
-    this.props.handleChange(e.target.value);
+
+  handleFormatChange(event) {
+    this.setState({ format: event.target.value, open: true });
+    this.props.handleChange(event.target.value);
   }
+
   closeSnackbar() {
     this.setState({ open: false });
   }
+
   render() {
     const { level, changeLevel, showingAllColors, classes } = this.props;
     const { format } = this.state;
@@ -81,4 +86,5 @@ class Navbar extends Component {
     );
   }
 }
+
 export default withStyles(styles)(Navbar);
