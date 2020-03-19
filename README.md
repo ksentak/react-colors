@@ -12,7 +12,11 @@ https://react-colors-01.netlify.com/
 
 ---
 
-###### App Description
+![Home Page](./public/app-screenshots/react-colors-home.png)
+
+---
+
+##### App Description
 
 - The user is first brought to the home page where they are able to view different color palettes.
 - Clicking on one of the color palettes allows the user to view the individual colors in the selected palette.
@@ -22,10 +26,6 @@ https://react-colors-01.netlify.com/
 
 ---
 
-![Home Page](./public/app-screenshots/react-colors-home.png)
-
----
-
-###### Author
+##### Author
 
 Keaton Sentak - [Portfolio](https://keatonsentak.com) | [GitHub](https://github.com/ksentak)
