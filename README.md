@@ -6,12 +6,6 @@
 
 ---
 
-##### Deployed Application:
-
-https://react-colors-01.netlify.com/
-
----
-
 ![Home Page](./public/app-screenshots/react-colors-home.png)
 
 ---
